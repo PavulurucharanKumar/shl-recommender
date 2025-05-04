@@ -5,6 +5,10 @@ import os
 app = Flask(__name__)
 engine = SHLRecommendationEngine('assessments.json')
 
+@app.route('/', methods=['GET'])
+def root():
+    return jsonify({"status": "API is running"})
+
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({"status": "API is running"})
