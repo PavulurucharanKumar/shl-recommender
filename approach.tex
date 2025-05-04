@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{noto}
+
+\begin{document}
+
+\title{SHL Assessment Recommendation System Approach}
+\author{}
+\date{}
+\maketitle
+
+\section*{Overview}
+The SHL Assessment Recommendation System recommends up to 10 SHL assessments based on a job description or query, respecting duration constraints. It uses NLP for matching, with a Streamlit UI, Flask API, and evaluation metrics.
+
+\section*{Approach}
+\begin{itemize}
+    \item \textbf{Data}: Stored assessments in JSON with name, URL, description, duration, remote/adaptive support, test type.
+    \item \textbf{Engine}: Used Sentence-BERT to rank assessments by cosine similarity, filtering by duration.
+    \item \textbf{App}: Built a Streamlit UI and Flask API with \texttt{/health} and \texttt{/recommend} endpoints.
+    \item \textbf{Evaluation}: Computed Mean Recall@3 (0.50) and MAP@3 (0.33) on test data.
+\end{itemize}
+
+\section*{Tools}
+Python, Sentence-Transformers, Flask, Streamlit, Pandas, NumPy, Scikit-learn, Render.
+
+\section*{Optimization}
+Improved scores by tuning similarity thresholds.
+
+\section*{Evaluation}
+Used test dataset to compare predictions against ground truth, calculating Recall@3 and MAP@3.
+
+\end{document}

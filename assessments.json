@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Occupational Personality Questionnaire (OPQ32r)",
+        "url": "https://www.shl.com/solutions/products/product-catalog/view/occupational-personality-questionnaire-opq32r/",
+        "description": "Assesses behavioral traits and interpersonal skills for leadership and team collaboration.",
+        "duration": 30,
+        "remote_support": "Yes",
+        "adaptive_support": "No",
+        "test_type": ["Personality", "Behavioral"]
+    },
+    {
+        "name": "SHL Verify Interactive - Inductive Reasoning",
+        "url": "https://www.shl.com/solutions/products/product-catalog/view/shl-verify-interactive-inductivereasoning/",
+        "description": "Evaluates problem-solving and pattern recognition for creative and analytical roles.",
+        "duration": 24,
+        "remote_support": "Yes",
+        "adaptive_support": "Yes",
+        "test_type": ["Cognitive", "Inductive Reasoning"]
+    },
+    {
+        "name": "Motivation Questionnaire MQM5",
+        "url": "https://www.shl.com/solutions/products/product-catalog/view/motivation-questionnaire-mqm5/",
+        "description": "Measures motivational fit for roles requiring team mentoring and cultural alignment.",
+        "duration": 20,
+        "remote_support": "Yes",
+        "adaptive_support": "No",
+        "test_type": ["Behavioral", "Motivation"]
+    },
+    {
+        "name": "English Comprehension (New)",
+        "url": "https://www.shl.com/solutions/products/product-catalog/view/english-comprehension-new/",
+        "description": "Tests proficiency in reading, writing, and speaking English for communication roles.",
+        "duration": 15,
+        "remote_support": "Yes",
+        "adaptive_support": "No",
+        "test_type": ["Skills", "Language"]
+    },
+    {
+        "name": "Automata - Fix (New)",
+        "url": "https://www.shl.com/solutions/products/product-catalog/view/automata-fix-new/",
+        "description": "Assesses coding and debugging skills for software development roles.",
+        "duration": 30,
+        "remote_support": "Yes",
+        "adaptive_support": "Yes",
+        "test_type": ["Skills", "Coding"]
+    }
+]
