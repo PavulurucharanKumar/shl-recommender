@@ -10,7 +10,7 @@ if st.button("Get Recommendations"):
     if not query.strip():
         st.error("Please enter a query.")
     else:
-        response = requests.post('http://localhost:5000/recommend', json={'query': query, 'max_duration': max_duration})
+        response = requests.post('https://shl-api.onrender.com/recommend', json={'query': query, 'max_duration': max_duration})
         if response.status_code == 200:
             recommendations = response.json()
             if recommendations:
