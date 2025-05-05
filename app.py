@@ -10,7 +10,8 @@ if st.button("Get Recommendations"):
         response = requests.post(
             "https://shl-api-jc4u.onrender.com/recommend",
             json={"query": query, "max_duration": max_duration},
-            headers={"Content-Type": "application/json"}
+            headers={"Content-Type": "application/json"},
+            timeout=30
         )
         recommendations = response.json()
         if isinstance(recommendations, list) and "error" not in recommendations[0]:
