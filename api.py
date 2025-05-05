@@ -3,7 +3,11 @@ from recommendation_engine import SHLRecommendationEngine
 import os
 
 app = Flask(__name__)
-engine = SHLRecommendationEngine('assessments.json')
+try:
+    engine = SHLRecommendationEngine('assessments.json')
+except Exception as e:
+    print(f"Failed to initialize engine: {str(e)}")
+    raise
 
 @app.route('/', methods=['GET'])
 def root():
@@ -15,11 +19,14 @@ def health():
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
-    data = request.get_json()
-    query = data.get('query', '')
-    max_duration = data.get('max_duration', 90)
-    recommendations = engine.recommend(query, max_duration)
-    return jsonify(recommendations)
+    try:
+        data = request.get_json()
+        query = data.get('query', '')
+        max_duration = data.get('max_duration', 90)
+        recommendations = engine.recommend(query, max_duration)
+        return jsonify(recommendations)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
